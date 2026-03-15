@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>setting page</title>
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+  .admin-login{
+    color: aliceblue;
+  }
+
+</style>
+
+<body>
+<!-- HEADER -->
+<div id="header">
+    <!-- container -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- LOGO -->
+            <div class="col-md-3">
+             
+                <a href="/admin/index" id="logo"><img src="/images/news.png" alt="Logo" /></a>
+             
+                       </div>
+            <!-- /LOGO -->
+        </div>
+    </div>
+    <div class="col-md-2">
+                <a href="/admin" class="admin-login">
+                  <i class="fa fa-sign-out"></i> Login
+                </a>
+            </div>
+</div>
+<!-- /HEADER -->
+<!-- Menu Bar -->
+<div id="menu-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='menu'>
+          <li><a href='/'>Home</a></li>
+            <% if(categories && categories.length > 0) { %>
+              <% categories.forEach(function(category) { %>
+                <li><a href='/category/<%= category.slug %>'><%= category.name %></a></li>
+              <% }); %>
+            <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Menu Bar -->
+
+  <div id="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+         <%- body %>
+        </div>
+        <!-- sidebar -->
+        <%- include ('partials/sidebar.ejs') %>
+        <!-- /sidebar -->
+      </div>
+    </div>
+  </div>
+  <div id ="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                 
+                    <span>© Copyright 2025 News | Powered by <a href="https://github.com/shivam7067">SHIVAM</a></span>
+               
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
