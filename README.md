@@ -14,12 +14,15 @@ A full-stack News Management System with role-based access control.
 - Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express.js
 - Database: MongoDB
-- Auth: JWT, Cookie
-
-## 🌐 Future Improvements
-- React frontend integration
-- Real-time updates
-- Image upload feature
+- Auth: JWT, Cookie 
+  
+## 🚀 Advanced Features
+- Role-Based Access Control (Admin & Author)
+- JWT Authentication & Authorization
+- Image Upload Support
+- Search Functionality
+- Pagination for optimized data loading
+- Comment System
 
 ## 👨‍💻 Author
 Shivam Rajput
